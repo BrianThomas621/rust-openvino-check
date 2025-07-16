@@ -30,7 +30,7 @@ If you need to install/update, follow [these instructions](https://downloadmirro
 
 *Install OpenVINO on Windows*
 
-1. Create a folder named "Intel" in your local `C:\Program Files (x86)` directory, if it does not already exist.
+1. Create a folder named "Intel" in your local `C:\Program Files (x86)\` directory, if it does not already exist.
 
 2. Download the [OpenVINO Runtime Archive File for Windows](https://storage.openvinotoolkit.org/repositories/openvino/packages/2025.2/windows/) to your local Downloads folder. Look for the archive file that starts with "openvino_toolkit_windows_".
 
@@ -39,7 +39,7 @@ If you need to install/update, follow [these instructions](https://downloadmirro
 4. Create an Environment Variable `OPENVINO_INSTALL_DIR`, with value `C:\Program Files (x86)\Intel\openvino_2025`. Later on, when we use the Rust openvino crate, it will search for this environment variable. 
 
 5. Add the folllowing two subfolders to your System PATH: 
-- `C:\Program Files (x86)\Intel\openvino_20 25\runtime\bin\intel64\Release`
+- `C:\Program Files (x86)\Intel\openvino_2025\runtime\bin\intel64\Release`
 - `C:\Program Files (x86)\Intel\openvino_2025\runtime\3rdparty\tbb\bin`
 
 You will now be able to use the Rust `openvino` crate for your Rust projects. 
