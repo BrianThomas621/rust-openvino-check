@@ -42,18 +42,15 @@ If you need to install/update, follow [these instructions](https://downloadmirro
 - `C:\Program Files (x86)\Intel\openvino_2025\runtime\bin\intel64\Release`
 - `C:\Program Files (x86)\Intel\openvino_2025\runtime\3rdparty\tbb\bin`
 
-You will now be able to use the Rust `openvino` crate for your Rust projects. 
+These subfolders contain .dlls that the Rust openvino crate will utilize. The 2nd path above contains the tbb12.dll, which is a C++ library file for Intel Threading Building Blocks (TBB) for parallel programming. If this .dll is missing, you will get a `STATUS_DLL_NOT_FOUND` error when you try to compile the Rust project. 
+
+After these five steps, you will now be able to use the Rust `openvino` crate for your Rust projects!
 
 6. In the `rust-openvino-check` folder, run `cargo run.` If OpenVINO is successfully installed, an OpenVINO core will be intialized and a quick device check will occur that will display your avaiable devices and a few basic properties. 
 
 ## OpenVINO 
 
-OpenVINO™ (Open Visual Inference and Neural Network Optimization) is an open-source toolkit developed by Intel to **optimize and accelerate AI inference** across a wide range of Intel hardware platforms—including CPUs, integrated and discrete GPUs, NPUs, VPUs, and FPGAs.
-
-### 🧠 What OpenVINO Is
-- A toolkit designed for **deploying deep learning models** efficiently.
-- Supports models from popular frameworks like TensorFlow, PyTorch, and ONNX.
-- Converts trained models into an intermediate representation (IR) for optimized execution.
+OpenVINO™ (Open Visual Inference and Neural Network Optimization) is an open-source toolkit developed by Intel to **optimize and accelerate AI inference** across a wide range of Intel hardware platforms—including CPUs, integrated and discrete GPUs, NPUs, and VPUs, as well as for **deploying deep learning models** efficiently. It supports models from popular frameworks like TensorFlow, PyTorch, and ONNX, and converts trained models into an intermediate representation (IR) for optimized execution.
 
 ### 🎯 Purpose of OpenVINO
 - **Maximize inference performance** for AI workloads such as computer vision, NLP, and generative AI.
@@ -68,7 +65,7 @@ OpenVINO™ (Open Visual Inference and Neural Network Optimization) is an open-s
 - OpenVINO uses **OneDNN** kernels and its own GPU plugins to tap into hardware-specific acceleration blocks like systolic arrays.
 - Automatically selects the best execution path based on hardware capabilities, including support for **INT8 and FP16 precision** for faster inference.
 
-In short, OpenVINO is Intel’s secret sauce for squeezing every ounce of performance out of its silicon for AI workloads. Want to dive deeper into how it compares across devices or how to tune it for your own models? I’ve got plenty more where that came from.
+In short, OpenVINO is Intel’s secret sauce for squeezing every ounce of performance out of its silicon for AI workloads. 
 
 ### Additional Resources: 
 
